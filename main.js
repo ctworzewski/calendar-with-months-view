@@ -1,5 +1,15 @@
 const myApp = document.querySelector('.myApp');
-let numberDays = document.createElement('span');
+// let numberDays = document.createElement('span');
+const nameDays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+
+
+// za zadanie muszę wyświetlić  nazwy dni tygodnia w DOM
+const boxNameDays = document.createElement('div');
+for (let i = 0; i < nameDays; i++) {
+    boxNameDays[i].innerHTML = nameDays[i];
+    
+}
+myApp.appendChild(boxNameDays);
 myApp.style.width = '600px';
 myApp.style.height = '600px';
 let daysNb=1;
@@ -17,8 +27,15 @@ function generateSquareMonth() {
         }
         btn.innerHTML = daysNb++;
         // console.log(i)
+    btn.addEventListener('click', function() {
+        console.log(btn.value);
+    });
     }
+    
 }
+
+
+
 generateSquareMonth();
 
 
