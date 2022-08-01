@@ -70,6 +70,10 @@ function days() {
 days();
 
 function nextMonthButton() {
+    oneDay++;
+    // time++;
+    days();
+
 }
 function prevMonthButton() {
 }
