@@ -1,8 +1,6 @@
 let myApp = document.querySelector(".myApp");
 let iloscDniwMiesiacu = 31;
 
-
-
 let nextMonth = document.createElement('button');
 let prevMonth = document.createElement('button');
 
@@ -48,7 +46,6 @@ function showNameDays() {
     }
   }
 }
-
 showNameDays();
 
 let time =myDate.getDate();
@@ -58,22 +55,24 @@ function days() {
       divMain.classList.add("divMain");
       myApp.style.backgroundColor = "yellow";
       myApp.appendChild(divMain);
-    
       for (let i = 1; i <= iloscDni; i++) {
         let btn = document.createElement("button");
         btn.classList.add("btn");
         divMain.appendChild(btn);
-        btn.innerHTML = time++;
+        btn.innerHTML = myDate.getMonth();
+        btn.addEventListener('click', function() {
+            console.log('kliknięta wartość to: ', btn);
+            console.log(time);
+        })
+        // console.log('kliknięta wartość to: ', btn.value);
       }
     }
 }
 days();
 
 function nextMonthButton() {
-    oneDay++;
-    // time++;
+    // console.log('testtt: ', time);
     days();
-
 }
 function prevMonthButton() {
 }
