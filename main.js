@@ -1,6 +1,17 @@
 let myApp = document.querySelector(".myApp");
 let iloscDniwMiesiacu = 31;
 
+
+
+let nextMonth = document.createElement('button');
+let prevMonth = document.createElement('button');
+
+prevMonth.innerHTML = 'Poprzedni miesiąc';
+nextMonth.innerHTML = 'Następny miesiąc';
+
+myApp.appendChild(prevMonth);
+myApp.appendChild(nextMonth);
+
 const nameDays = [
   "Poniedziałek",
   "Wtorek",
@@ -10,6 +21,8 @@ const nameDays = [
   "Sobota",
   "Niedziela",
 ];
+
+const myDate = new Date();
 const boxNameDays = document.createElement("div");
 boxNameDays.classList.add("boxNameDays");
 
@@ -37,16 +50,29 @@ function showNameDays() {
 }
 
 showNameDays();
-for (let i = 1; i <= 1; i++) {
-  let divMain = document.createElement("div");
-  divMain.classList.add("divMain");
-  myApp.style.backgroundColor = "yellow";
-  myApp.appendChild(divMain);
 
-  for (let i = 1; i <= iloscDni; i++) {
-    let btn = document.createElement("button");
-    btn.classList.add("btn");
-    divMain.appendChild(btn);
-    btn.innerHTML = oneDay++;
-  }
+let time =myDate.getDate();
+function days() {
+    for (let i = 1; i <= 1; i++) {
+      let divMain = document.createElement("div");
+      divMain.classList.add("divMain");
+      myApp.style.backgroundColor = "yellow";
+      myApp.appendChild(divMain);
+    
+      for (let i = 1; i <= iloscDni; i++) {
+        let btn = document.createElement("button");
+        btn.classList.add("btn");
+        divMain.appendChild(btn);
+        btn.innerHTML = time++;
+      }
+    }
 }
+days();
+
+function nextMonthButton() {
+}
+function prevMonthButton() {
+}
+
+nextMonth.addEventListener('click', nextMonthButton);
+prevMonth.addEventListener('click', prevMonthButton);
