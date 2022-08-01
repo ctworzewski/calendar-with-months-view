@@ -33,7 +33,7 @@ function showNameDays() {
 
 showNameDays();
 // let counter = 1;
-for (let i = 1; i <=5; i++) {
+for (let i = 1; i <=1; i++) {
     let divMain = document.createElement('div');
     divMain.classList.add('divMain');
     myApp.style.backgroundColor = 'yellow';
