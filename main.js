@@ -16,6 +16,7 @@ let divSeven = document.createElement('div');
 let testDiv = document.createElement('div');
 
 let iloscDni = 31;
+let oneDay = 1;
 let weekBox;
 
 function showNameDays() {
@@ -38,17 +39,11 @@ for (let i = 1; i <=5; i++) {
     myApp.style.backgroundColor = 'yellow';
     myApp.appendChild(divMain);
 
-    for (let i =1; i <= 7; i++) {
+    for (let i =1; i <= iloscDni; i++) {
         let btn = document.createElement('button');
-        btn.classList.add('btn');
-        for (let k = 1; k <= 10; k++) {
-            btn.style.backgroundColor = 'red';
-            divMain.appendChild(btn);
-            btn.innerHTML = divMain[k];
-        }
-        
+        btn.classList.add('btn');        
         divMain.appendChild(btn);
-        btn.innerHTML = 'ss';
+        btn.innerHTML = oneDay++;
     }
 }
 
