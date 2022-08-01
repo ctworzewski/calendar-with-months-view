@@ -10,7 +10,8 @@ const el = document.createElement('span');
 myApp.appendChild(boxNameDays);
 boxNameDays.appendChild(el);
 
-for (let i = 0; i < nameDays.length; i++) {
+for (let i = 0; i <= nameDays.length; i++) {
+    const el = document.createElement('span');
     for (let j = 0; j < i; j++) {
 
         myApp.appendChild(boxNameDays);
