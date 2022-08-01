@@ -11,7 +11,12 @@
 
 .item-name {
     border: 2px solid green;
-    width: 12%;
+    width: 13%;
+}
+
+.btn {
+    width: 13.18%;
+    height: 100px;
 }
 
 .backgroundApp {
