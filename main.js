@@ -7,10 +7,20 @@ const nameDays = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'S
 //Podziału na tygodnie. Najlepiej gdyby dni renderowaly się po 7 dni na tydzień. 1 tydzień = 1 rząd
 const boxNameDays = document.createElement('div');
 const el = document.createElement('span');
-el.innerHTML = nameDays[0];
 myApp.appendChild(boxNameDays);
 boxNameDays.appendChild(el);
 
+for (let i = 0; i < nameDays.length; i++) {
+    for (let j = 0; j < i; j++) {
+
+        myApp.appendChild(boxNameDays);
+        
+        boxNameDays.appendChild(el);
+        
+        el.innerHTML = nameDays[j];
+    }
+    
+}
 
 
 
