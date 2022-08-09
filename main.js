@@ -59,7 +59,7 @@ function days() {
         let btn = document.createElement("button");
         btn.classList.add("btn");
         divMain.appendChild(btn);
-        btn.innerHTML = myDate.getDate();
+        btn.innerHTML = myDate.getDay();
         btn.addEventListener('click', function() {
             console.log('kliknięta wartość to: ', btn);
             console.log(time);
