@@ -71,7 +71,9 @@ function days() {
 days();
 
 function nextMonthButton() {
-    // console.log('testtt: ', time);
+  // klasa ?  
+  // console.log('testtt: ', time);
+
     days();
 }
 function prevMonthButton() {
