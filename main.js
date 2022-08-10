@@ -35,6 +35,7 @@ let iloscDni = 31;
 let oneDay = 1;
 let weekBox;
 
+let time =myDate.getDate();
 function showNameDays() {
   for (let i = 0; i <= nameDays.length; i++) {
     const el = document.createElement("div");
@@ -42,13 +43,12 @@ function showNameDays() {
     for (let j = 0; j < i; j++) {
       myApp.appendChild(boxNameDays);
       boxNameDays.appendChild(el);
-      el.innerHTML = nameDays[j];
+      el.innerHTML = time[i];
     }
   }
 }
 showNameDays();
 
-let time =myDate.getDate();
 function days() {
     for (let i = 1; i <= 1; i++) {
       let divMain = document.createElement("div");
@@ -59,7 +59,7 @@ function days() {
         let btn = document.createElement("button");
         btn.classList.add("btn");
         divMain.appendChild(btn);
-        btn.innerHTML = myDate.getDay();
+        btn.innerHTML = time++;
         btn.addEventListener('click', function() {
             console.log('kliknięta wartość to: ', btn);
             console.log(time);
