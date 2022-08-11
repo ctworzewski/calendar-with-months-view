@@ -35,7 +35,6 @@ let iloscDni = 31;
 let oneDay = 1;
 let weekBox;
 
-let time =myDate.getDate();
 function showNameDays() {
   for (let i = 0; i <= nameDays.length; i++) {
     const el = document.createElement("div");
@@ -43,42 +42,39 @@ function showNameDays() {
     for (let j = 0; j < i; j++) {
       myApp.appendChild(boxNameDays);
       boxNameDays.appendChild(el);
-      el.innerHTML = time[i];
+      el.innerHTML = nameDays[j];
     }
   }
 }
 showNameDays();
 
-function days() {
-    for (let i = 1; i <= 1; i++) {
+function getOneDay(dayNumber) {
+    let btn = document.createElement("button");
+    btn.classList.add("btn");
+    btn.innerHTML = dayNumber;
+    btn.setAttribute('value', dayNumber);
+    btn.addEventListener('click', function(event) {
+            console.log('kliknięta1 wartość to: ', event.target.value);
+            console.log(dayNumber);
+        });
+        return btn;
+}
+function showCurrentMonthDays() {
       let divMain = document.createElement("div");
       divMain.classList.add("divMain");
       myApp.style.backgroundColor = "yellow";
       myApp.appendChild(divMain);
+
       for (let i = 1; i <= iloscDni; i++) {
-        let btn = document.createElement("button");
-        btn.classList.add("btn");
-        divMain.appendChild(btn);
-        btn.innerHTML = time++;
-        btn.addEventListener('click', function() {
-            console.log('kliknięta wartość to: ', btn);
-            console.log(time);
-        })
+        divMain.appendChild(getOneDay(i));
+
         // console.log('kliknięta wartość to: ', btn.value);
       }
-    }
 }
-days();
+showCurrentMonthDays();
 
 function nextMonthButton() {
-  // klasa ?  
-  // klasa ?  
-  // klasa ?  
-  // klasa ?  
-  // klasa ?  
-  // klasa ?  
-  // console.log('testtt: ', time);
-
+    // console.log('testtt: ', time);
     days();
 }
 function prevMonthButton() {
